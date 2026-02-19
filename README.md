@@ -84,7 +84,7 @@ Rather than just modeling who churned historically, this project produces a **fo
 ```
 silent-exits-telecom-churn/
 │
-├── WA_Fn-UseC_-Telco-Customer-Churn.csv   # Raw dataset (Kaggle)
+├── WA_Fn-UseC_-Telco-Customer-Churn.csv    # Raw dataset (Kaggle)
 ├── churn_analysis.py                       # EDA + ML model (Python)
 ├── churn_queries.sql                       # 8 business-framed SQL queries
 ├── churn_dashboard.png                     # 6-panel visual analytics dashboard
@@ -130,4 +130,4 @@ python churn_analysis.py
 
 **Himanshu Kothari**  
 Final-year CSE @ VIT Vellore | Business & Data Analyst  
-[LinkedIn](https://linkedin.com/in/HimanshuKothari) · [GitHub](https://github.com/HimanshuKothari)
+[LinkedIn](https://linkedin.com/in/himanshu-kothari-14917b275) · [GitHub](https://github.com/Himanshu-2615)
