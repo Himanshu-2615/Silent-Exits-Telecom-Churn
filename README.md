@@ -1,7 +1,15 @@
 # 📉 Silent Exits: Telecom Churn & Retention Study
-**Tools:** Python · SQL · Power BI · Excel &nbsp;|&nbsp; **Dataset:** IBM Watson Telco Churn (Kaggle, 7,043 customers) &nbsp;|&nbsp; **Domain:** Telecom / CRM Analytics
+**Tools:** Python · SQL · Tableau · Excel &nbsp;|&nbsp; **Dataset:** IBM Watson Telco Churn (Kaggle, 7,043 customers) &nbsp;|&nbsp; **Domain:** Telecom / CRM Analytics
 
 > *"Silent exits" — customers who leave without complaint, without warning. The ones you never saw coming until the revenue was already gone.*
+
+---
+
+## 📊 Live Dashboard
+
+👉 **[View Interactive Tableau Dashboard](https://public.tableau.com/app/profile/himanshu.kothari6704/viz/SilentExits-TelecomChurnRetentionStudy/SilentExitsDashboard)**
+
+![Churn Analysis Dashboard](churn_dashboard.png)
 
 ---
 
@@ -15,19 +23,13 @@ Telecom companies lose customers quietly. Unlike complaints or service calls, ch
 
 ---
 
-## 📊 Dashboard Preview
-
-![Churn Analysis Dashboard](churn_dashboard.png)
-
----
-
 ## 🔍 Key Findings
 
 | Finding | Detail |
 |---|---|
-| **Overall churn rate** | 25.2% — roughly 1 in 4 customers left |
-| **Riskiest contract type** | Month-to-month → **37.5% churn rate** vs 5.5% for two-year contracts |
-| **Riskiest service** | Fiber optic customers churn at **33.7%** — a premium product with a loyalty problem |
+| **Overall churn rate** | 26.5% — roughly 1 in 4 customers left |
+| **Riskiest contract type** | Month-to-month → **42.7% churn rate** vs 2.8% for two-year contracts |
+| **Riskiest service** | Fiber optic customers churn at **41.9%** — a premium product with a loyalty problem |
 | **Critical window** | Customers in their **first 12 months** are 3x more likely to churn than long-tenure customers |
 | **Revenue at risk** | Churned customers represent ~**$125K/month** in lost recurring revenue |
 | **Payment signal** | Electronic check users churn at nearly 2x the rate of auto-pay customers |
@@ -71,7 +73,7 @@ Rather than just modeling who churned historically, this project produces a **fo
 
 **1. Launch a "Month 6 Save" campaign** — target month-to-month fiber customers at the 6-month mark with a discounted annual contract. This hits the highest-risk segment before the exit decision is made.
 
-**2. Investigate the fiber optic value gap** — a 33.7% churn rate on a premium product signals either price dissatisfaction or reliability issues. Segment NPS surveys by internet type to find root cause.
+**2. Investigate the fiber optic value gap** — a 41.9% churn rate on a premium product signals either price dissatisfaction or reliability issues. Segment NPS surveys by internet type to find root cause.
 
 **3. Make auto-pay the default** — electronic check users churn at nearly 2x the rate of auto-pay customers. A $2–5 bill credit for enabling auto-pay would pay for itself many times over.
 
@@ -100,17 +102,19 @@ silent-exits-telecom-churn/
 
 **2. Exploratory Analysis (Python + SQL)** — Churn rate by contract, internet service, tenure cohort, and payment method. Revenue-at-risk quantification. Tenure cohort analysis to find the highest-risk lifecycle window.
 
-**3. Predictive Modeling** — Random Forest Classifier (class-weight balanced for imbalanced labels). ROC-AUC: **0.738**. Top predictors: `tenure`, `Contract`, `MonthlyCharges`, `InternetService`, `OnlineSecurity`.
+**3. Predictive Modeling** — Random Forest Classifier (class-weight balanced for imbalanced labels). ROC-AUC: **0.819**. Top predictors: `tenure`, `Contract`, `MonthlyCharges`, `InternetService`, `OnlineSecurity`.
 
 **4. Business Translation** — ROI model converting churn reduction % into dollar impact. Risk tier framework mapping customer profiles to specific CRM interventions.
+
+**5. Interactive Dashboard** — 5-chart Tableau Public dashboard covering churn split, contract analysis, internet service breakdown, tenure distribution, and monthly charges comparison.
 
 ---
 
 ## 📦 Setup & Run
 
 ```bash
-git clone https://github.com/HimanshuKothari/silent-exits-telecom-churn.git
-cd silent-exits-telecom-churn
+git clone https://github.com/Himanshu-2615/Silent-Exits-Telecom-Churn.git
+cd Silent-Exits-Telecom-Churn
 
 pip install pandas numpy matplotlib seaborn scikit-learn
 
